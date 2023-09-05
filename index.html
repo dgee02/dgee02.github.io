@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Derek Gee</title>
+	<link rel="shortcut icon" href="imgs/favicon.png" type="image/x-png">
+	<link rel="stylesheet" href="style.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body oncontextmenu="return false">
+	<div class="background"></div>
+	<div class="background background2"></div>
+	<div class="background background3"></div>
+	<nav>
+		<header>
+			<img src="imgs/logo.gif" alt="Derek Logo">
+		</header>
+	</nav>
+
+	<main class="animate">
+		<div id="main-flex">
+			<div id="div-about">
+				<h3>About</h3>
+				<hr>
+				<div class="container-face">
+					<div class="face">
+						<div class="eyes">
+							<span class="eye"></span>
+							<span class="eye"></span>
+						</div>
+					</div>
+				</div>
+				<p>👋 Hi there, I'm <b>Derek Gee</b>.</p>
+				<p>🏫 I'm a current computer science student at SFU.</p>
+				<p>🎨 I'm passionate about design and enjoy the creative process.</p>
+				<p>🚀 I'm naturally curious and love exploring new technology frontiers.</p>
+			</div>
+			<div>
+				<h3>Projects</h3>
+				<hr>
+				<div id="div-game">
+					<a href="https://dgee02.github.io/browser-game/index.html" target="_blank">
+						<div class="rollover">
+							<img src="imgs/browser-game.gif" alt="Browser Game Screenshot">
+							<h4>Browser Game: Side-Scroller <i class="icon-external-link"></i></h4>
+						</div>
+					</a>
+				</div>
+				<div>
+					<a href="https://dgee02.github.io/movie-search/index.html" target="_blank">
+						<div class="rollover">
+							<img src="imgs/movie-search.gif" alt="Movie Search Screenshot">
+							<h4>React Application: Movie Search <i class="icon-external-link"></i></h4>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<hr>
+		<div id="div-icons">
+			<a id="link-github" href="https://github.com/dgee02" target="_blank">
+				<div class="rollover">
+					<img src="imgs/GitHub-Mark-Light-120px-plus.png" alt="GitHub Logo">
+				</div>
+			</a>
+			<a id="link-linkedin" href="https://www.linkedin.com/in/derek-gee" target="_blank">
+				<div class="rollover">
+					<img src="imgs/In-Blue-Logo.png.original.png" alt="LinkedIn Logo">
+				</div>
+			</a>
+		</div>
+	</footer>
+	<script>
+		document.querySelector("body").addEventListener('mousemove', (event) => {
+			const eyes = document.querySelectorAll(".container-face .face .eyes .eye");
+			eyes.forEach((eye) => {
+				const x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
+				const y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
+				const radian = Math.atan2(event.pageX - x, event.pageY - y);
+				const rotation = (radian * (180 / Math.PI) * -1) + 270;
+				eye.style.transform = `rotate(${rotation}deg)`;
+			});
+		});
+	</script>
+</body>
+
+</html>
