@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  min-height: 100vh;
+  font-family: Poppins, sans-serif;
+  color: white;
+  background-color: #231a2e;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  display: inline-block;
+  color: white;
+  transition: 0.6s;
+}
+
+.project-container-frosted-effect {
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent),
+    linear-gradient(to right,
+      rgba(44, 10, 59, 0.897),
+      rgba(44, 18, 80, 0.87)),
+    url("Imgs/static.png");
+}
+
+@keyframes pulsate {
+  0% {
+    filter: drop-shadow(0 0 20px rgba(184, 61, 186, 0.5)) drop-shadow(0 0 40px rgba(184, 61, 186, 0.4)) drop-shadow(0 0 60px rgba(184, 61, 186, 0.3)) drop-shadow(0 0 80px rgba(184, 61, 186, 0.2));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 40px rgba(184, 61, 186, 0.8)) drop-shadow(0 0 60px rgba(184, 61, 186, 0.7)) drop-shadow(0 0 80px rgba(184, 61, 186, 0.6)) drop-shadow(0 0 100px rgba(184, 61, 186, 0.5));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 20px rgba(184, 61, 186, 0.5)) drop-shadow(0 0 40px rgba(184, 61, 186, 0.4)) drop-shadow(0 0 60px rgba(184, 61, 186, 0.3)) drop-shadow(0 0 80px rgba(184, 61, 186, 0.2));
+  }
+}
