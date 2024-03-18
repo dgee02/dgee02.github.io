@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import ProjectContainer from "./ProjectContainer.jsx";
+import ProjectContainer from "../Components/ProjectContainer.jsx";
 
 const baseUrl =
-    "https://api.github.com/repos/dgee02/personal-website-project-content/contents/";
+    "https://api.github.com/repos/dgee02/personal-website-project-content/contents/projects/";
 
 const httpClient = axios.create({
     baseURL: baseUrl,
@@ -16,7 +16,7 @@ export default function Projects() {
     useEffect(() => {
         async function fetchData() {
             const result = await httpClient.get("/");
-            const data = result.data.filter((file) => file.name.endsWith(".md"));
+            const data = result.data.filter((file) => file.name.endsWith(".txt"));
             setProjects(data);
         }
         fetchData();

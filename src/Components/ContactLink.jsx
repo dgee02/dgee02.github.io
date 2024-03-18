@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-function ContactLink({ Image, href, alt }) {
+export default function ContactLink({ Image, href, alt }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -29,5 +29,3 @@ function ContactLink({ Image, href, alt }) {
     </motion.a>
   );
 }
-
-export default ContactLink;

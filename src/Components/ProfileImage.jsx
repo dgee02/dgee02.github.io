@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function ProfileImage({ Image }) {
+export default function ProfileImage({ Image }) {
     return (
         <div className="flex justify-center items-center">
             <motion.img
@@ -26,5 +26,3 @@ function ProfileImage({ Image }) {
         </div>
     );
 }
-
-export default ProfileImage;

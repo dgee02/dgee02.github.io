@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function FullscreenIntro({ Image }) {
+export default function FullscreenIntro() {
+    const logoGif = `https://raw.githubusercontent.com/dgee02/personal-website-project-content/main/intro/logo.gif`;
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
@@ -24,7 +25,7 @@ function FullscreenIntro({ Image }) {
                 >
                     <motion.img
                         className="max-w-32 md:max-w-48"
-                        src={Image}
+                        src={logoGif}
                         alt="Derek Gee Logo"
                         initial={{ scale: 1, opacity: 0.25 }}
                         animate={{ scale: 2, opacity: 1 }}
@@ -43,5 +44,3 @@ function FullscreenIntro({ Image }) {
         </AnimatePresence>
     );
 }
-
-export default FullscreenIntro;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
-function TypewriterComponent() {
+export default function TypewriterComponent() {
   const [showTypewriter, setShowTypewriter] = useState(false);
 
   useEffect(() => {
@@ -37,5 +37,3 @@ function TypewriterComponent() {
     </motion.h4>
   );
 }
-
-export default TypewriterComponent;
