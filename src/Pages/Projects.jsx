@@ -3,7 +3,7 @@ import axios from "axios";
 import ProjectContainer from "../Components/ProjectContainer.jsx";
 
 const baseUrl =
-    "https://api.github.com/repos/dgee02/personal-website-project-content/contents/projects/";
+    "https://api.github.com/repos/dgee02/portfolio-content/contents/projects/";
 
 const httpClient = axios.create({
     baseURL: baseUrl,

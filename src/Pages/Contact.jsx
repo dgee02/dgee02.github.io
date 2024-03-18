@@ -9,12 +9,12 @@ import emailIcon from "../Imgs/email.png";
 export default function Contact() {
     const [contactData, setContactData] = useState("");
     const cleanContactData = DOMPurify.sanitize(contactData);
-    const logoImage = `https://raw.githubusercontent.com/dgee02/personal-website-project-content/main/contact/logo.png`;
+    const logoImage = `https://raw.githubusercontent.com/dgee02/portfolio-content/main/contact/logo.png`;
 
     useEffect(() => {
         async function fetchData() {
             const result = await axios.get(
-                `https://raw.githubusercontent.com/dgee02/personal-website-project-content/main/contact/contact.txt`
+                `https://raw.githubusercontent.com/dgee02/portfolio-content/main/contact/contact.txt`
             );
             setContactData(result.data);
         }

@@ -7,12 +7,12 @@ import Typewriter from "../Components/Typewriter.jsx";
 export default function About() {
     const [aboutData, setAboutData] = useState("");
     const cleanAboutData = DOMPurify.sanitize(aboutData);
-    const profileImage = `https://raw.githubusercontent.com/dgee02/personal-website-project-content/main/about/profile.png`;
+    const profileImage = `https://raw.githubusercontent.com/dgee02/portfolio-content/main/about/profile.png`;
 
     useEffect(() => {
         async function fetchData() {
             const result = await axios.get(
-                `https://raw.githubusercontent.com/dgee02/personal-website-project-content/main/about/about.txt`
+                `https://raw.githubusercontent.com/dgee02/portfolio-content/main/about/about.txt`
             );
             setAboutData(result.data);
         }

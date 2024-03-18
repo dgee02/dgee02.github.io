@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function FullscreenIntro() {
-    const logoGif = `https://raw.githubusercontent.com/dgee02/personal-website-project-content/main/intro/logo.gif`;
+    const logoGif = `https://raw.githubusercontent.com/dgee02/portfolio-content/main/intro/logo.gif`;
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {

@@ -8,14 +8,14 @@ export default function ProjectContainer({ Name }) {
     const ProjectTitle = ProjectName.split("-")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
-    const gifLink = `https://raw.githubusercontent.com/dgee02/personal-website-project-content/main/projects/${ProjectName}.gif`;
+    const gifLink = `https://raw.githubusercontent.com/dgee02/portfolio-content/main/projects/${ProjectName}.gif`;
     const [projectData, setProjectData] = useState("");
     const cleanProjectData = DOMPurify.sanitize(projectData);
 
     useEffect(() => {
         async function fetchData() {
             const result = await axios.get(
-                `https://raw.githubusercontent.com/dgee02/personal-website-project-content/main/projects/${Name}`
+                `https://raw.githubusercontent.com/dgee02/portfolio-content/main/projects/${Name}`
             );
             setProjectData(result.data);
         }
@@ -32,7 +32,7 @@ export default function ProjectContainer({ Name }) {
             whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { duration: 1.5, ease: "backInOut" },
+                transition: { duration: 1, ease: "backInOut" },
             }}
         >
             <div>
