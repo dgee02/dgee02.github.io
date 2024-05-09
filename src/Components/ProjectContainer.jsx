@@ -37,7 +37,7 @@ export default function ProjectContainer({ Name }) {
         >
             <div>
                 <h3 className="m-0 p-0 text-2xl xl:text-3xl font-bold">
-                    Featured Project: {ProjectTitle}
+                    {ProjectTitle}
                 </h3>
                 <div className="my-8 flex justify-center">
                     <img

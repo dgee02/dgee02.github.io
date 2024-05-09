@@ -24,10 +24,15 @@ export default function Projects() {
 
     return (
         <div className="min-h-screen w-full flex justify-center items-center">
-            <div className="grid grid-cols-1 xl:grid-cols-2 py-7 px-7 md:px-20 lg:px-28 xl:px-40 2xl:px-72">
-                {projects.map((res, idx) => (
-                    <ProjectContainer key={idx} Name={res.name} />
-                ))}
+            <div className="py-7">
+                <h4 className="text-6xl xl:text-8xl font-bold my-14">
+                    Featured Projects
+                </h4>
+                <div className="grid grid-cols-1 xl:grid-cols-2 pb-14 px-7 md:px-20 lg:px-28 xl:px-40 2xl:px-72">
+                    {projects.map((res, idx) => (
+                        <ProjectContainer key={idx} Name={res.name} />
+                    ))}
+                </div>
             </div>
         </div>
     );
