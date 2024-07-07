@@ -2,14 +2,14 @@
 
 ## Description
 
-👋 Welcome to my portfolio website! I have created everything here from scratch. Feel free to dive in and discover more on the [live website](https://dgee02.github.io/)!
+👋 Welcome to my portfolio website! I have created all aspects of it from scratch. Feel free to dive in and discover more on the [live website](https://dgee02.github.io/)!
 
 ## Features
 
 - 📱 Responsive design for optimal viewing across devices
 - 🖌️ Styling with Tailwind CSS for rapid development and customizability
 - ✨ Interactive animations powered by Framer Motion
-- 🌐 Fetching website data from external API using Axios
+- 🌐 Dynamic content fetching for real-time updates and seamless content management
 
 ## Technologies Used
 
