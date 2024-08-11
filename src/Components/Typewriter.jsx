@@ -23,7 +23,6 @@ export default function TypewriterComponent() {
                 "a dev.",
                 "an artist.",
                 "a gamer.",
-                "a learner.",
               ],
               autoStart: true,
               loop: true,
