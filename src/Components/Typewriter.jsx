@@ -20,6 +20,7 @@ export default function TypewriterComponent() {
             options={{
               strings: [
                 "Derek Gee.",
+                "a student.",
                 "a dev.",
                 "an artist.",
                 "a gamer.",
