@@ -24,7 +24,7 @@ export default function Projects() {
 
     return (
         <div className="min-h-screen w-full flex justify-center items-center">
-            <div className="py-7">
+            <div className="py-7 z-30">
                 <h4 className="text-6xl xl:text-8xl font-bold my-14">
                     Featured Projects
                 </h4>

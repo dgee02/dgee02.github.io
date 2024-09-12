@@ -11,6 +11,7 @@ export default function ProjectContainer({ Name }) {
     const gifLink = `https://raw.githubusercontent.com/dgee02/portfolio-content/main/projects/${ProjectName}.gif`;
     const [projectData, setProjectData] = useState("");
     const cleanProjectData = DOMPurify.sanitize(projectData);
+    const [isHovered, setIsHovered] = useState(false);
 
     useEffect(() => {
         async function fetchData() {
@@ -24,10 +25,19 @@ export default function ProjectContainer({ Name }) {
 
     return (
         <motion.div
-            className="project-container-frosted-effect p-6 md:p-10 rounded-xl my-8 xl:mx-8 z-10 flex flex-col justify-between"
-            transition={{ duration: 0.5, ease: "linear" }}
-            whileHover={{ scale: 1.01 }}
-            style={{ boxShadow: "0px 10px 40px -5px rgba(0, 0, 0, 0.7)" }}
+            className="project-container-frosted-effect p-6 md:p-10 rounded-xl my-8 xl:mx-8 z-40 flex flex-col justify-between"
+            transition={{
+                duration: 0.3,
+                ease: "linear",
+            }}
+            whileHover={{
+                scale: 1.02,
+                boxShadow: "0 0 40px rgba(184, 61, 186, 0.8)",
+            }}
+            style={{
+                boxShadow: "0px 10px 40px -5px rgba(0, 0, 0, 0.7)",
+                transition: "box-shadow 0.3s linear",
+            }}
             initial={{ opacity: 0, y: 25 }}
             whileInView={{
                 opacity: 1,
@@ -51,20 +61,23 @@ export default function ProjectContainer({ Name }) {
                     dangerouslySetInnerHTML={{ __html: cleanProjectData }}
                 ></p>
             </div>
-            <a href={"https://github.com/dgee02/" + ProjectName} target="_blank">
-                <motion.div
-                    className="project-container-button b1 rounded-xl cursor-pointer text-white bg-purple-950 border-2 border-purple-600 border-opacity-40 p-3 mt-8"
-                    whileHover={{
-                        scale: 1.1,
-                        boxShadow: "0 0 10px rgba(184, 61, 186, 0.8)",
-                    }}
-                    transition={{ duration: 0.3, ease: "linear" }}
-                >
+            <motion.div
+                className="project-container-button b1 rounded-xl cursor-pointer text-white bg-purple-950 border-2 border-purple-600 border-opacity-40 p-3 mt-8"
+                whileHover={{
+                    scale: 1.15,
+                    boxShadow: "0 0 10px rgba(184, 61, 186, 0.8)",
+                }}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                animate={isHovered ? { rotate: [0, 5, -5, 5, -5, 0] } : {}}
+                transition={{ duration: 0.5, ease: "linear" }}
+            >
+                <a href={"https://github.com/dgee02/" + ProjectName} target="_blank">
                     <h4 className="text-xl xl:text-2xl no-underline m-0 p-0">
                         LEARN MORE
                     </h4>
-                </motion.div>
-            </a>
+                </a>
+            </motion.div>
         </motion.div>
     );
 }

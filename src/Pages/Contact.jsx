@@ -23,7 +23,7 @@ export default function Contact() {
 
     return (
         <div className="min-h-screen w-full flex justify-center items-center">
-            <div className="py-7 px-7 md:px-20 lg:px-28 xl:px-40 2xl:px-72">
+            <div className="py-7 px-7 md:px-20 lg:px-28 xl:px-40 2xl:px-72 z-30">
                 <div className="flex justify-center items-center">
                     <img
                         src={logoImage}

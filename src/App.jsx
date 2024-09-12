@@ -5,6 +5,7 @@ import About from "./Pages/About.jsx";
 import Projects from "./Pages/Projects.jsx";
 import Contact from "./Pages/Contact.jsx";
 import FullscreenIntro from "./Components/FullscreenIntro.jsx";
+import CustomCursor from "./Components/CustomCursor.jsx";
 
 function InnerComponent() {
   return (
@@ -31,6 +32,7 @@ function InnerComponent() {
 export default function App() {
   return (
     <BrowserRouter>
+      <CustomCursor />
       <InnerComponent />
     </BrowserRouter>
   );

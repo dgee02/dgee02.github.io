@@ -13,23 +13,15 @@ export default function TypewriterComponent() {
 
   return (
     <motion.h4 className="text-6xl xl:text-8xl font-bold my-14">
-      Hi! I'm{" "}
+      Hi!
       <span style={{ display: "inline-block" }}>
         {showTypewriter && (
           <Typewriter
             options={{
-              strings: [
-                "Derek Gee.",
-                "a student.",
-                "a dev.",
-                "an artist.",
-                "a gamer.",
-              ],
-              autoStart: true,
-              loop: true,
-              pauseFor: 2000,
-              delay: 150,
-              deleteSpeed: 150,
+              cursor: "",
+            }}
+            onInit={(typewriter) => {
+              typewriter.typeString("\xa0I'm Derek Gee").pauseFor(2000).start();
             }}
           />
         )}
