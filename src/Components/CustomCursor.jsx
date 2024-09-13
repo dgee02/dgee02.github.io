@@ -12,6 +12,17 @@ const CustomCursor = () => {
             cursor.style.top = `${e.clientY - cursorHeight / 2}px`;
         };
 
+        const centerCursor = () => {
+            const cursorWidth = cursor.offsetWidth;
+            const cursorHeight = cursor.offsetHeight;
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            cursor.style.left = `${centerX - cursorWidth / 2}px`;
+            cursor.style.top = `${centerY - cursorHeight / 2}px`;
+        };
+
+        centerCursor();
+
         window.addEventListener("mousemove", moveCursor);
 
         return () => {
