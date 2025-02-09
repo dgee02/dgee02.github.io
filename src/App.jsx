@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useLocation, BrowserRouter } from "react-router-dom";
+import { useLocation, BrowserRouter, Route, Routes } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import About from "./Pages/About.jsx";
 import Projects from "./Pages/Projects.jsx";
@@ -35,7 +35,9 @@ export default function App() {
     <BrowserRouter>
       {/* <CustomCursor /> */}
       <ScrollToTop />
-      <InnerComponent />
+      <Routes>
+        <Route path="/" element={<InnerComponent />} />
+      </Routes>
     </BrowserRouter>
   );
 }
