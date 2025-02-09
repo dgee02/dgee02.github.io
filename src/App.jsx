@@ -8,9 +8,24 @@ import FullscreenIntro from "./Components/FullscreenIntro.jsx";
 // import CustomCursor from "./Components/CustomCursor.jsx";
 
 function InnerComponent() {
+  const location = useLocation();
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    const handleScroll = () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+      });
+    };
+
+    handleScroll();
+    window.addEventListener('load', handleScroll);
+
+    return () => {
+      window.removeEventListener('load', handleScroll);
+    };
+  }, [location.pathname]);
 
   return (
     <>
