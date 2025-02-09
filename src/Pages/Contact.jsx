@@ -115,7 +115,7 @@ export default function Contact() {
                     </motion.div>
                 </div>
                 <motion.h4
-                    className="text-6xl xl:text-8xl font-bold my-14"
+                    className="text-6xl xl:text-8xl font-bold my-14 z-40"
                     initial={{ opacity: 0, y: 25 }}
                     whileInView={{
                         opacity: 1,
