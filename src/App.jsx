@@ -5,28 +5,10 @@ import About from "./Pages/About.jsx";
 import Projects from "./Pages/Projects.jsx";
 import Contact from "./Pages/Contact.jsx";
 import FullscreenIntro from "./Components/FullscreenIntro.jsx";
+import ScrollToTop from "./Components/ScrollToTop.jsx";
 // import CustomCursor from "./Components/CustomCursor.jsx";
 
 function InnerComponent() {
-  const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'instant'
-      });
-    };
-
-    handleScroll();
-    window.addEventListener('load', handleScroll);
-
-    return () => {
-      window.removeEventListener('load', handleScroll);
-    };
-  }, [location.pathname]);
-
   return (
     <>
       <div>
@@ -52,6 +34,7 @@ export default function App() {
   return (
     <BrowserRouter>
       {/* <CustomCursor /> */}
+      <ScrollToTop />
       <InnerComponent />
     </BrowserRouter>
   );
