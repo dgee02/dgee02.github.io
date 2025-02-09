@@ -5,9 +5,13 @@ import About from "./Pages/About.jsx";
 import Projects from "./Pages/Projects.jsx";
 import Contact from "./Pages/Contact.jsx";
 import FullscreenIntro from "./Components/FullscreenIntro.jsx";
-import CustomCursor from "./Components/CustomCursor.jsx";
+// import CustomCursor from "./Components/CustomCursor.jsx";
 
 function InnerComponent() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div>
@@ -32,7 +36,7 @@ function InnerComponent() {
 export default function App() {
   return (
     <BrowserRouter>
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       <InnerComponent />
     </BrowserRouter>
   );

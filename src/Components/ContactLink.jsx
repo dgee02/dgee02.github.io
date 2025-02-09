@@ -8,7 +8,7 @@ export default function ContactLink({ Image, href, alt }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setJiggle(true);
-      setTimeout(() => setJiggle(false), 1000);
+      setTimeout(() => setJiggle(false), 500);
     }, 4000);
     return () => clearInterval(interval);
   }, []);
@@ -34,7 +34,7 @@ export default function ContactLink({ Image, href, alt }) {
               : "none",
           transition: "filter 0.3s linear",
         }}
-        animate={isHovered || jiggle ? { rotate: [0, 5, -5, 5, -5, 0] } : {}}
+        animate={/*isHovered ||*/ jiggle ? { rotate: [0, 5, -5, 5, -5, 0] } : {}}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       />
     </motion.a>

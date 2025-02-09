@@ -8,20 +8,39 @@ export default function TypewriterComponent() {
   useEffect(() => {
     setTimeout(() => {
       setShowTypewriter(true);
-    }, 5000);
+    }, 4500);
   }, []);
 
   return (
     <motion.h4 className="text-6xl xl:text-8xl font-bold my-14">
-      Hi!
+      {/* Hi! */}
       <span style={{ display: "inline-block" }}>
         {showTypewriter && (
           <Typewriter
             options={{
-              cursor: "",
+              cursor: "|",
+              delay: 100,
             }}
             onInit={(typewriter) => {
-              typewriter.typeString("\xa0I'm Derek Gee").pauseFor(2000).start();
+              typewriter
+                .pauseFor(1000)
+                .typeString("Hi! 👋")
+                .pauseFor(1000)
+                .deleteAll()
+                // .typeString("\xa0I'▓ ")
+                // .typeString("█▀▄▌░▒▓")
+                // .deleteChars(7)
+                // .typeString("D█▒▄▀")
+                // .typeString("▀▓e")
+                .pauseFor(1000)
+                // .deleteChars(8)
+                .typeString("I'm Derek ")
+                // .typeString("▓▒░")
+                // .deleteChars(3)
+                // .pauseFor(500)
+                // .deleteChars(3)
+                .typeString("Gee")
+                .start();
             }}
           />
         )}

@@ -32,7 +32,8 @@ export default function ProjectContainer({ Name }) {
             }}
             whileHover={{
                 scale: 1.02,
-                boxShadow: "0 0 40px rgba(184, 61, 186, 0.8)",
+                boxShadow: "0px 30px 60px rgba(0, 0, 0, 0.7)",
+                // boxShadow: "0 0 40px rgba(184, 61, 186, 0.8)",
             }}
             style={{
                 boxShadow: "0px 10px 40px -5px rgba(0, 0, 0, 0.7)",
@@ -44,6 +45,7 @@ export default function ProjectContainer({ Name }) {
                 y: 0,
                 transition: { duration: 1, ease: "backInOut" },
             }}
+            viewport={{ once: true }}
         >
             <div>
                 <h3 className="m-0 p-0 text-2xl xl:text-3xl font-bold">
@@ -69,8 +71,8 @@ export default function ProjectContainer({ Name }) {
                 }}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                animate={isHovered ? { rotate: [0, 5, -5, 5, -5, 0] } : {}}
-                transition={{ duration: 0.5, ease: "linear" }}
+                // animate={isHovered ? { rotate: [0, 5, -5, 5, -5, 0] } : {}}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
             >
                 <a href={"https://github.com/dgee02/" + ProjectName} target="_blank">
                     <h4 className="text-xl xl:text-2xl no-underline m-0 p-0">
