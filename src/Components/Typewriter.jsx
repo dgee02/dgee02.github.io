@@ -25,7 +25,7 @@ export default function TypewriterComponent() {
           <Typewriter
             options={{
               cursor: "|",
-              delay: 100,
+              delay: 125,
               stringSplitter,
             }}
             onInit={(typewriter) => {
@@ -47,9 +47,9 @@ export default function TypewriterComponent() {
 
 
 
-                .typeString("Ḓ̴̺̭̳̤̳̓̐̂̉͘ͅ▄r̵̹̤̣͈̉̎͗ḛ̷̙̙͔̊͒̏̄̉̑͋̊̌̆̍̕█ ̴̨̨̧̡̛͇̻̹̲͈͔̝̟̪͌̍̒̑̄̇̓̿̀̎͘G̵̦̩̦̥̈́̀̇̔̃̿̎̆̀̾̅́̍͘░e̴̟̪̠̻͖͉͖̪̜͔̾̔ͅ")
-                .pauseFor(1000)
-                .deleteChars(9)
+                // .typeString("Ḓ̴̺̭̳̤̳̓̐̂̉͘ͅ▄r̵̹̤̣͈̉̎͗ḛ̷̙̙͔̊͒̏̄̉̑͋̊̌̆̍̕█ ̴̨̨̧̡̛͇̻̹̲͈͔̝̟̪͌̍̒̑̄̇̓̿̀̎͘G̵̦̩̦̥̈́̀̇̔̃̿̎̆̀̾̅́̍͘░e̴̟̪̠̻͖͉͖̪̜͔̾̔ͅ")
+                // .pauseFor(1000)
+                // .deleteChars(9)
                 // .deleteChars(8)
                 .typeString("Derek ")
                 // .typeString("▓▒░")
