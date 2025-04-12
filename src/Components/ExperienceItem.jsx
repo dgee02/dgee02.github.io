@@ -57,7 +57,7 @@ export default function ExperienceItem({ Name, isRight, onDateExtracted }) {
                 opacity: 0,
                 y: 25,
                 x: 0,
-                "@media (min-width: 1280px)": {
+                "@media (minWidth: 1280px)": {
                     y: 0,
                     x: isRight ? 25 : -25,
                 },
