@@ -84,7 +84,7 @@ export default function Contact() {
     };
 
     return (
-        <div className="min-h-screen w-full flex justify-center items-center">
+        <div className="min-h-screen w-full flex flex-col justify-center relative">
             <div className="py-7 px-7 md:px-20 lg:px-28 xl:px-40 2xl:px-72 z-30">
                 <div className="flex justify-center items-center">
                     <motion.div
@@ -106,6 +106,7 @@ export default function Contact() {
                             ref={logoRef}
                             src={logoImage}
                             alt="Derek Gee Logo"
+                            className="h-44 xl:h-56"
                             style={{
                                 animation: "pulsate 5s infinite",
                                 maxHeight: "15.5em",
@@ -115,7 +116,7 @@ export default function Contact() {
                     </motion.div>
                 </div>
                 <motion.h4
-                    className="text-6xl xl:text-8xl font-bold my-14 z-40"
+                    className="text-5xl xl:text-7xl font-bold my-10 z-40"
                     initial={{ opacity: 0, y: 25 }}
                     whileInView={{
                         opacity: 1,
@@ -163,6 +164,11 @@ export default function Contact() {
                         alt="Email Icon"
                     />
                 </motion.div>
+            </div>
+            <div className="w-full text-center py-4 mt-0 text-sm text-gray-400">
+                <p>
+                &copy; Derek Gee 🧑‍💻
+                </p>
             </div>
         </div>
     );

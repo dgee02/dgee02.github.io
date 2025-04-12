@@ -25,7 +25,7 @@ export default function ProjectContainer({ Name }) {
 
     return (
         <motion.div
-            className="project-container-frosted-effect p-6 md:p-10 rounded-xl my-8 xl:mx-8 z-40 flex flex-col justify-between"
+            className="project-container-frosted-effect p-4 md:p-6 rounded-xl my-6 xl:mx-8 z-40 flex flex-col justify-between border-2 border-purple-600 border-opacity-40"
             transition={{
                 duration: 0.3,
                 ease: "linear",
@@ -51,7 +51,7 @@ export default function ProjectContainer({ Name }) {
                 <h3 className="m-0 p-0 text-2xl xl:text-3xl font-bold">
                     {ProjectTitle}
                 </h3>
-                <div className="my-8 flex justify-center">
+                <div className="my-4 flex justify-center">
                     <img
                         className="rounded-xl"
                         src={gifLink}
@@ -59,12 +59,12 @@ export default function ProjectContainer({ Name }) {
                     />
                 </div>
                 <p
-                    className="m-0 py-2 text-lg xl:text-xl"
+                    className="m-0 text-lg xl:text-xl"
                     dangerouslySetInnerHTML={{ __html: cleanProjectData }}
                 ></p>
             </div>
             <motion.div
-                className="project-container-button b1 rounded-xl cursor-pointer text-white bg-purple-950 border-2 border-purple-600 border-opacity-40 p-3 mt-8"
+                className="project-container-button b1 rounded-xl cursor-pointer text-white bg-purple-950 border-2 border-purple-600 border-opacity-40 p-3 mt-4"
                 whileHover={{
                     scale: 1.15,
                     boxShadow: "0 0 10px rgba(184, 61, 186, 0.8)",

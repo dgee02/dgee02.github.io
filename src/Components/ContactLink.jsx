@@ -23,7 +23,7 @@ export default function ContactLink({ Image, href, alt }) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <motion.img
-        className="max-h-28 px-8 pt-8"
+        className="max-h-20 pt-6 px-4 xl:max-h-24 xl:px-8 xl:pt-8"
         src={Image}
         alt={alt}
         style={{

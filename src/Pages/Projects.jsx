@@ -27,7 +27,7 @@ export default function Projects() {
         <div className="min-h-screen w-full flex justify-center items-center">
             <div className="py-7 z-30">
                 <motion.h4
-                    className="text-6xl xl:text-8xl font-bold my-14"
+                    className="text-5xl xl:text-7xl font-bold my-10"
                     initial={{ opacity: 0, y: 25 }}
                     whileInView={{
                         opacity: 1,
@@ -36,7 +36,7 @@ export default function Projects() {
                     }}
                     viewport={{ once: true }}
                 >
-                    Featured Projects
+                    Showcase
                 </motion.h4>
                 <div className="grid grid-cols-1 xl:grid-cols-2 pb-14 px-7 md:px-20 lg:px-28 xl:px-40 2xl:px-72">
                     {projects.map((res, idx) => (

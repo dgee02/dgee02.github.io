@@ -7,6 +7,7 @@ export default function ProfileImage({ Image }) {
             <motion.img
                 src={Image}
                 alt="Derek Gee Profile Image"
+                className="w-48 h-48 xl:w-64 xl:h-64"
                 initial={{ scale: 0, boxShadow: "none" }}
                 animate={{
                     scale: [0, 1.05, 0.95, 1],

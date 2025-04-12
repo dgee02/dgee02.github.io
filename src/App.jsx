@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useLocation, BrowserRouter, Route, Routes } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import About from "./Pages/About.jsx";
+import Experience from "./Pages/Experience.jsx";
 import Projects from "./Pages/Projects.jsx";
 import Contact from "./Pages/Contact.jsx";
 import FullscreenIntro from "./Components/FullscreenIntro.jsx";
@@ -21,6 +22,7 @@ function InnerComponent() {
             transition={{ delay: 4, duration: 1.75, ease: "easeIn" }}
           >
             <About />
+            <Experience />
             <Projects />
             <Contact />
           </motion.main>
