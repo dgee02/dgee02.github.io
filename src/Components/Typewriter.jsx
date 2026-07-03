@@ -31,7 +31,7 @@ export default function TypewriterComponent() {
               delay: 125,
               pauseFor: 1500,
               stringSplitter,
-              strings: ["Hi! 👋", "I'm Derek Gee", "👨‍💻 • 🎨 • 🎮"],
+              strings: ["Hi! 👋", "I'm Derek Gee", "👨‍💻 🎨 🎮 ⚽"],
             }}
           />
         )}

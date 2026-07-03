@@ -165,11 +165,18 @@ export default function Contact() {
                     />
                 </motion.div>
             </div>
-            <div className="w-full text-center py-4 mt-0 text-sm text-gray-400">
-                <p>
-                &copy; Derek Gee 🧑‍💻
-                </p>
-            </div>
+            <motion.div
+                className="w-full text-center py-4 mt-0 text-sm text-gray-400"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.8, ease: "backInOut", delay: 0.15 },
+                }}
+                viewport={{ once: true }}
+            >
+                <p>&copy; Derek Gee 🧑‍💻</p>
+            </motion.div>
         </div>
     );
 }
